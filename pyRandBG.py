@@ -9,9 +9,10 @@ def get_random_files():
     files = os.listdir(indir)                   # get files in directory
     num_files = len(files)                      #get number of files in directory
 
-    # exclude first picture, this is our composed picture and we do not want this to be drawn
-    not_yet_drawn = list(range(1, num_files-1))
+    # rmove final composed picture, we do not want this to be drawn
+    files.remove("__00final.png")
 
+    not_yet_drawn = list(range(0, num_files-1))
     # make sure a file is not drawn twice
     # for that we remove the just drawn index from the possible choices
     idx0 = random.choice(not_yet_drawn)
@@ -57,5 +58,5 @@ def set_background(file):
 while True:
     files = get_random_files()          # get random files
     spanned = create_spanning(files)    # create spanned images
-    set_background(spanned)             # set background
+#    set_background(spanned)             # set background
     time.sleep(30)                      # sleep 30 seconds
