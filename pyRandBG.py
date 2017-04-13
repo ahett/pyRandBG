@@ -58,5 +58,5 @@ def set_background(file):
 while True:
     files = get_random_files()          # get random files
     spanned = create_spanning(files)    # create spanned images
-#    set_background(spanned)             # set background
-    time.sleep(30)                      # sleep 30 seconds
+    set_background(spanned)             # set background
+    time.sleep(300)                      # sleep 30 seconds
