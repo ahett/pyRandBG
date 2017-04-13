@@ -59,4 +59,4 @@ while True:
     files = get_random_files()          # get random files
     spanned = create_spanning(files)    # create spanned images
     set_background(spanned)             # set background
-    time.sleep(300)                      # sleep 30 seconds
+    time.sleep(300)                      # sleep 300 seconds
